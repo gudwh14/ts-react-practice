@@ -10,17 +10,19 @@ import SampleProvider from "./ContextAPI/SampleContext";
 import Sample from "./ContextAPI/Sample";
 import CounterContainer from "./Redux/components/CounterContainer";
 import TodoContainer from "./Redux/components/TodoContainer";
+import CounterContainerRF from "./Redux/ReduxToolkit/components/CounterContainerRF";
 
 function App() {
   return (
       // <SampleProvider>
       //   {/*<Hello name={"JJO"} optional={"Option!"} onClick={(name: string)=>{console.log(name)}}/>*/}
       //   {/*<MyForm onSubmit={(form : {name : string , age : number})=>{console.log(form)}}/>*/}
-      //   {/*<Counter/>*/}
+      //   {/*<CounterRF/>*/}
       //   <Sample/>
       // </SampleProvider>
       // <CounterContainer/>
-      <TodoContainer/>
+      // <TodoContainer/>
+      <CounterContainerRF/>
   );
 }
 
