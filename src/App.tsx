@@ -9,6 +9,7 @@ import ReducerSample from "./useReducer/ReducerSample";
 import SampleProvider from "./ContextAPI/SampleContext";
 import Sample from "./ContextAPI/Sample";
 import CounterContainer from "./Redux/components/CounterContainer";
+import TodoContainer from "./Redux/components/TodoContainer";
 
 function App() {
   return (
@@ -18,7 +19,8 @@ function App() {
       //   {/*<Counter/>*/}
       //   <Sample/>
       // </SampleProvider>
-      <CounterContainer/>
+      // <CounterContainer/>
+      <TodoContainer/>
   );
 }
 
