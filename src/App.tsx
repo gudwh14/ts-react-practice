@@ -11,6 +11,7 @@ import Sample from "./ContextAPI/Sample";
 import CounterContainer from "./Redux/components/CounterContainer";
 import TodoContainer from "./Redux/components/TodoContainer";
 import CounterContainerRF from "./Redux/ReduxToolkit/components/CounterContainerRF";
+import RouterIndex from "./Router/RouterIndex";
 
 function App() {
   return (
@@ -22,7 +23,8 @@ function App() {
       // </SampleProvider>
       // <CounterContainer/>
       // <TodoContainer/>
-      <CounterContainerRF/>
+      // <CounterContainerRF/>
+      <RouterIndex/>
   );
 }
 
