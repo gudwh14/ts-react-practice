@@ -12,6 +12,7 @@ import CounterContainer from "./Redux/components/CounterContainer";
 import TodoContainer from "./Redux/components/TodoContainer";
 import CounterContainerRF from "./Redux/ReduxToolkit/components/CounterContainerRF";
 import RouterIndex from "./Router/RouterIndex";
+import TodoContainerRF from "./Redux/ReduxToolkit/components/TodoContainerRF";
 
 function App() {
   return (
@@ -24,7 +25,8 @@ function App() {
       // <CounterContainer/>
       // <TodoContainer/>
       // <CounterContainerRF/>
-      <RouterIndex/>
+      <TodoContainerRF/>
+      // <RouterIndex/>
   );
 }
 
