@@ -3,7 +3,7 @@ import axios from "axios";
 export const getUserProfile = async (username : string) => {
     // Generics 를 통해 axios 의 응답 data 타입을 설정 할 수 있다.
     const response = await axios.get<GithubProfile>(`https://api.github.com/users/${username}`);
-    return response;
+    return response.data;
 }
 
 export interface GithubProfile {

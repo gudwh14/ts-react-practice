@@ -3,13 +3,15 @@ import {RootSateRF} from "../modules";
 import {fetchTodo} from "../modules/github/githubThunk";
 import GithubUserForm from "./GithubUserForm";
 import GithubProfileInfo from "./GithubProfileInfo";
+import {getUserProfileAsync} from '../modules/github/githubSlice';
 
 const GithubContainer = () => {
     const {loading ,data ,error} = useSelector((state : RootSateRF) => state.githubSlice.userProfile);
     const dispatch = useDispatch();
 
     const onSubmitUsername = (username : string) => {
-        dispatch(fetchTodo(username));
+        // dispatch(fetchTodo(username)); thunk 를 사용한 dispatch 호출
+        dispatch(getUserProfileAsync(username)); // saga 를 사용한 dispatch 호출
     }
 
     return (

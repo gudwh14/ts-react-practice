@@ -24,6 +24,21 @@ export const githubSlice = createSlice({
     name : 'github',
     initialState : initialState,
     reducers : {
+        getUserProfileAsync(state : GithubState, action : PayloadAction<string>) {
+            state.userProfile.loading = true;
+            state.userProfile.data = null;
+            state.userProfile.error = null;
+        },
+        getUserProfileAsyncSuccess(state : GithubState, action : PayloadAction<GithubProfile>) {
+            state.userProfile.loading = false;
+            state.userProfile.data = action.payload;
+            state.userProfile.error = null;
+        },
+        getUserProfileAsyncError(state :GithubState, action : PayloadAction<GithubError>) {
+            state.userProfile.loading = false;
+            state.userProfile.data = null;
+            state.userProfile.error = action.payload;
+        }
     },
     //만들어진 비동기 액션에 대한 리듀서는 아래와 같이 extraReducers 로 작성할 수 있다.
     //extraReducers 로 지정된 reducer 는 외부 작업을 참조하기 위한 것이기 때문에
@@ -50,3 +65,4 @@ export const githubSlice = createSlice({
 })
 
 export default githubSlice.reducer;
+export const {getUserProfileAsync, getUserProfileAsyncSuccess, getUserProfileAsyncError} = githubSlice.actions;
