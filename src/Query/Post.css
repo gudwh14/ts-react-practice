@@ -1,0 +1,18 @@
+
+.Link {
+    display: block;
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.Link-cached {
+    display: block;
+    text-decoration: none;
+    color: Red;
+    font-weight: bold;
+    font-size: 20px;
+    cursor: pointer;
+}

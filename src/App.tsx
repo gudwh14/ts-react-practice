@@ -14,6 +14,9 @@ import CounterContainerRF from "./Redux/ReduxToolkit/components/CounterContainer
 import RouterIndex from "./Router/RouterIndex";
 import TodoContainerRF from "./Redux/ReduxToolkit/components/TodoContainerRF";
 import GithubContainer from "./Redux/ReduxToolkit/components/GithubContainer";
+import Posts from "./Query/Posts";
+import {Route, Switch} from "react-router-dom";
+import Post from "./Query/Post";
 
 function App() {
   return (
@@ -27,8 +30,12 @@ function App() {
       // <TodoContainer/>
       // <CounterContainerRF/>
       // <TodoContainerRF/>
-      <GithubContainer/>
+      // <GithubContainer/>
       // <RouterIndex/>
+      <Switch>
+        <Route path={"/"} exact component={Posts}/>
+        <Route path={"/post/:id"}  component={Post}/>
+      </Switch>
   );
 }
 
